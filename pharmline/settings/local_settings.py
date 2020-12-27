@@ -461,10 +461,3 @@ CKEDITOR_CONFIGS = {
 #         ]),
 #     }
 # }
-
-# EMAIL_HOST = 'smtp.gmail.com'
-# EMAIL_PORT = 587 #2525
-# EMAIL_HOST_USER = 'qurol.django99@gmail.com'
-# EMAIL_HOST_PASSWORD = 'shiriksaidova99*'
-# EMAIL_USE_TLS = True
-# EMAIL_USE_SSL = False
