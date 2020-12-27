@@ -1,0 +1,82 @@
+{% load i18n static %}
+<div id="Action_bar">
+    <div class="container">
+        <div class="column one">
+            <ul class="contact_details">
+
+                <li class="phone">
+                    <i class="icon-phone"></i><a href="tel:+61383766284">+998 (90) 987 65 43</a>
+                </li>
+                <li class="slogan">
+                    {% trans 'Выбор языка' %}
+                </li>
+                <li>
+                    <form action="{% url 'set_language' %}" method="post">{% csrf_token %}
+                        <input name="next" type="hidden" value="{{ redirect_to }}">
+                        <select name="language">
+                            {% get_current_language as LANGUAGE_CODE %}
+                            {% get_available_languages as LANGUAGES %}
+                            {% get_language_info_list for LANGUAGES as languages %}
+                            {% for language in languages %}
+                                <option value="{{ language.code }}"{% if language.code == LANGUAGE_CODE %}
+                                        selected{% endif %}>
+                                    {{ language.name_local }} ({{ language.code }})
+                                </option>
+                            {% endfor %}
+                        </select>
+                        <input type="submit" value="OK">
+                    </form>
+                </li>
+
+            </ul>
+            <ul class="social">
+                <li class="skype">
+                    <a href="https://www.instagram.com" title="Instagram"><i class="icon-instagram"></i></a>
+                </li>
+                <li class="facebook">
+                    <a href="https://www.facebook.com" title="Facebook"><i class="icon-facebook"></i></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div id="Top_bar">
+    <div class="container">
+        <div class="column one">
+            <div class="top_bar_left clearfix">
+
+                <div class="menu_wrapper">
+                    <nav id="menu">
+                        <ul id="menu-main-menu" class="menu menu-main">
+                            <li class="current-menu-item">
+                                <a href="{% url 'home' %}"><span>{% trans 'Главная' %}</span></a>
+                            </li>
+                            <li>
+                                <a href="{% url 'about' %}"><span>{% trans 'О компании' %}</span></a>
+                            </li>
+                            <li>
+                                <a href="{% url 'properties' %}"><span>{% trans 'Каталог' %}</span></a>
+                            </li>
+                            <div class="logo">
+                                <a id="logo" style="    z-index: 99999;
+                                position: absolute;
+                                top: -42%;
+                                left: 37%;" href="{% url 'home' %}" title="BeEstate 2 - BeTheme" data-padding="15"><img class="logo-main scale-with-grid" style="max-height: 170px !important;" src="{% static 'content/estate2/images/logo.png' %}" data-retina="{% static 'content/estate2/images/logo.png' %}" alt="estate2"><img class="logo-sticky scale-with-grid" src="{% static 'content/estate2/images/logo.png' %}" data-retina="{% static 'content/estate2/images/logo.png' %}" alt="estate2"><img class="logo-mobile scale-with-grid" src="{% static 'content/estate2/images/logo.png' %}" data-retina="{% static 'content/estate2/images/logo.png' %}" alt="estate2"><img class="logo-mobile-sticky scale-with-grid" src="{% static 'content/estate2/images/logo.png' %}" data-retina="{% static 'content/estate2/images/logo.png' %}" alt="estate2"></a>
+                            </div>
+                            <li style="margin-left: 350px;">
+                                <a href="{% url 'services' %}"><span>{% trans 'Услуги' %}</span></a>
+                            </li>
+                            <li>
+                                <a href="{% url 'articles' %}"><span>{% trans 'Статьи' %}</span></a>
+                            </li>
+                            <li>
+                                <a href="{% url 'videos' %}"><span>{% trans 'Видео' %}</span></a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <a class="responsive-menu-toggle" href="#"><i class="icon-menu-fine"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

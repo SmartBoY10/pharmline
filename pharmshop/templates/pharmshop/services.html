@@ -1,0 +1,95 @@
+{% extends 'base.html' %}
+{% load i18n static %}
+{% block services %} 
+<div id="Content">
+    <div class="content_wrapper clearfix">
+        <div class="sections_group">
+            <div class="entry-content">
+                <div class="section mcb-section" style="background-image:url({% static 'content/estate2/images/bg3.jpg' %}); background-repeat:no-repeat; background-position:center; background-size: cover; background-attachment: fixed; width: 100%; height: 100%;">
+                    <hr class="no_line" style="margin:0 auto 60px">
+                    <div class="section_wrapper mcb-section-inner">
+                        <h4 style="text-align: center; color: #fff;">
+                            <b>{% trans 'ЗА ГОДЫ РАБОТЫ МЫ ЗАРЕКОМЕНДОВАЛИ СЕБЯ' %}</b>
+                        </h4>
+                        <h2 style="text-align: center; color: #fff;">{% trans 'КАК НАДЖЕНЫЙ ПАРТНЕР' %}</h2>
+                        <h4 style="text-align: center; color: #fff; margin-bottom: 150px;">
+                            <b>{% trans 'В ОБЛАСТИ ФАРМАЦЕВТИЧЕСКОГО МАРКЕТИНГА' %}</b>
+                        </h4>
+                        <hr class="no_line" style="margin:0 auto 60px">
+                    </div>
+                </div>
+                <div class="section mcb-section" style="padding-top:70px; padding-bottom:30px">
+                    <div class="section_wrapper mcb-section-inner">
+                        <div class="wrap mcb-wrap one valign-top clearfix">
+                            <div class="mcb-wrap-inner">
+                                <div class="column mcb-column one column_column">
+                                    <div class="column_attr clearfix align_center">
+                                        <h2>{% trans 'Услуги' %}</h2>
+                                        <hr class="no_line" style="margin:0 auto 30px">
+                                        <div style="width: 90px; height: 3px; background: #5e55bb; margin: 0 auto;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="section_wrapper mcb-section-inner">
+                            <div class="column mcb-column one column_offer">
+                                <div class="block1">
+                                    <img src="{% static 'content/estate2/images/registration.png' %}" class="blimg">
+                                    <div style="width: 90px; height: 4px; background: #5e55bb; margin: 20px auto;"></div>
+                                    <p style="color: #000;"><b>{% trans 'Регистрация, перерегистрация, внесение изменений в материалы регистрационного досье.' %}</b></p>
+                                </div>
+                                <div class="block4">
+                                    <img src="{% static 'content/estate2/images/seo-report.png' %}" class="blimg">
+                                    <div style="width: 90px; height: 4px; background: #5e55bb; margin: 20px auto;"></div>
+                                    <p style="color: #000;"><b>{% trans 'Аудит материалов регистрационного досье с целью регистрации, перерегистрации, внесения изменений в материалы регистрационного досье.' %}</b></p>
+                                </div>
+                                <div class="block3">
+                                    <img src="{% static 'content/estate2/images/archive.png' %}" class="blimg">
+                                    <div style="width: 90px; height: 4px; background: #5e55bb; margin: 20px auto;"></div>
+                                    <p style="color: #000;"><b>{% trans 'Подготовка (сбор, доработка) материалов регистрационного досье, согласно требований законодательства.' %}</b></p>
+                                </div>
+                            </div>
+                        </div>
+                
+                <div class="section mcb-section" style="padding-top:0px; padding-bottom:50px">
+                    <div class="section_wrapper mcb-section-inner">
+                        <div class="wrap mcb-wrap one valign-top clearfix">
+                            <div class="mcb-wrap-inner">
+                                
+                                    <div class="column_attr clearfix">
+                                        <p>{% trans 'В «Pharmline Plus» создано несколько подразделений по продвижению препаратов. Подразделения выделены по производителю и по характеру продукции нацеленной на определенную целевую аудиторию.' %}</p>
+                                    </div>
+                                    <div class="column_attr clearfix">
+                                        <p>
+                                            <b>
+                                            {% trans 'Подразделения нацелены на взаимодействие с целевыми группами:' %}
+                                            </b>
+                                            <br>
+                                            <li>   {% trans 'Госпитальные закупы' %}</li>
+                                            <li>{% trans 'Аптечные продажи, работа с провизорами и первостольниками аптек' %}</li>
+                                            <li>{% trans 'Врачи первичного амбулаторного звена' %}</li>
+                                            <li>{% trans 'Узкопрофильные клиники и специалисты (онкология, гематология, эндокринология, неврология и др.)' %}</li>
+                                            <br><br>
+                                            <b>{% trans 'Также наша компания оказывает следующие услуги по дистрибуции:' %}</b><br>
+
+                                            <li>{% trans 'Предоставление информации о востребованных лекарственных средств на рынке;' %}</li>
+                                            <li>{% trans 'Организация и контроль поставки лекарственных средств через поставщиков/дистрибьюторов;' %}</li>
+                                            <li>{% trans 'Консультации по ценовой политике в отношении лекарственных препаратов.' %}</li><br><br>
+                                            {% trans '“Pharmline Plus ” за годы работы зарекомендовала себя, как надежный партнер в области фармацевтического маркетинга, предоставляющая услуги высокого качества. Основной целью “Pharmline Plus ” является, быть гибкой и клиент ориентированной командой профессионалов, способной обеспечить высокий уровень сервиса.' %}
+
+
+                                        </p>
+                                    </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock services %}

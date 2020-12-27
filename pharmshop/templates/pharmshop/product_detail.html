@@ -1,0 +1,160 @@
+{% extends 'base.html' %}
+{% load i18n static %}
+{% block product %} 
+<div id="Content">
+    <div class="content_wrapper clearfix">
+        <div class="sections_group">
+            <div class=" portfolio type-portfolio has-post-thumbnail">
+                
+                <div class="entry-content">
+                    <div class="section mcb-section" style="padding-top:100px; padding-bottom:50px">
+                        <div class="section_wrapper mcb-section-inner">                            
+                            <div class="wrap mcb-wrap one valign-top clearfix" style="padding:20px 0 0 0">
+                                <div class="mcb-wrap-inner">
+                                    <div class="wrap mcb-wrap one-second column-margin-10px valign-top clearfix">
+                                        <div class="mcb-wrap-inner">
+                                            <div class="column mcb-column one column_image">
+                                                <div class="image_frame image_item no_link scale-with-grid aligncenter no_border">
+                                                    <div class="image_wrapper">
+                                                        <img class="scale-with-grid" src="{{ product.photo.url }}">
+                                                    </div>
+                                                </div>
+                                            </div>                                            
+                                        </div>
+                                    </div>
+                                    <div class="column mcb-column one-second column_column">
+                                        <div class="column_attr clearfix">
+                                            <h2>{{ product.name }}</h2>
+                                            <h4>{{ product.mode_of_application }}</h4>
+                                            <p class="big">
+                                                {% trans 'Действующее вещество:' %}
+                                            </p>
+                                            <h4>{{ product.active_substance }}</h4>
+                                            <p class="big">
+                                                <b>{% trans 'Показание препарата:' %}</b><br>
+                                                {{ product.description|safe }}
+                                            </p>
+                                            <h1>{{ product.price }} {% trans 'Сум' %}</h1>
+                                            <div class="column mcb-column one column_button">
+                                                <a target="_blank" href="#" data-toggle="modal" data-target="#myModal1" class="button button_size_2 button_theme button_js" style="border-radius: 30px;">
+                                                    <span class="button_label" >{% trans 'ЗАКАЗАТЬ' %}</span>
+                                                </a>                            
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="wrap mcb-wrap one valign-top clearfix">
+                                <div class="mcb-wrap-inner">
+                                    <div class="column mcb-column one-fifth column_placeholder">
+                                        <div class="placeholder">
+                                            &nbsp;
+                                        </div>
+                                    </div>
+
+                                    <div class="column mcb-column three-fifth column_column">
+                                        <div class="column_attr clearfix">
+                                            <h4>{% trans 'Дополнительная информация:' %}</h4>
+                                            <p class="big">
+                                                <b>{% trans 'Действие препарата:' %}</b>
+                                                <br>{{ product.drug_action }}<br>
+                                                <b>{% trans 'Состав:' %}</b>
+                                                <br>{{ product.structure }}<br>
+                                                <b>{% trans 'Формы выпуска:' %}</b>
+                                                <br>{{ product.release_forms }}<br>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>                              
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- <div class="section section-post-footer">
+                    <div class="section_wrapper clearfix">
+                        <div class="column one post-pager"></div>
+                    </div>
+                </div>
+
+                <div class="section section-post-related">
+                    <div class="section_wrapper clearfix">
+                        <div class="section-related-adjustment simple">
+                            <h2 style="text-align: center;">Лекарственные средства</h2>
+                            <hr class="no_line" style="margin:0 auto 30px">
+                            <div style="width: 90px; height: 3px; background: #5e55bb; margin: 0 auto;"></div>
+                            <hr class="no_line" style="margin:0 auto 30px">
+                            <div class="section-related-ul col-3">
+                                
+                                {% for product in footer_products %}                                    
+                                <div class="column post-related portfolio type-portfolio has-post-thumbnail">
+                                    <div class="image_frame scale-with-grid">
+                                        <div class="image_wrapper">
+                                            <a href="{{ product.get_absolute_url }}">
+                                                <div class="mask"></div>
+                                                <img src="{{ product.photo.url }}" class="scale-with-grid wp-post-image" />
+                                            </a>
+                                            <div class="image_links double">
+                                                <a href="{{ product.photo.url }}" class="zoom" rel="prettyphoto"><i class="icon-search"></i></a><a href="portfolio-item.html" class="link"><i class="icon-link"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="desc">
+                                        <h4><a href="{{ product.get_absolute_url }}">{{ product.name }}</a></h4>
+                                        <hr class="hr_color">
+                                        <p>{{ product.desciption|truncatewords:13 }}</p>                                        
+                                    </div>
+                                </div>
+                                {% endfor %}
+                                <div class="column post-related portfolio type-portfolio has-post-thumbnail">
+                                    <div class="image_frame scale-with-grid">
+                                        <div class="image_wrapper">
+                                            <a href="portfolio-item.html">
+                                                <div class="mask"></div>
+                                                <img src="images/home_estate2_portfolio7-960x720.jpg" class="scale-with-grid wp-post-image" />
+                                            </a>
+                                            <div class="image_links double">
+                                                <a href="images/home_estate2_portfolio7-1200x774.jpg" class="zoom" rel="prettyphoto"><i class="icon-search"></i></a><a href="portfolio-item.html" class="link"><i class="icon-link"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="desc">
+                                        <h4><a href="portfolio-item.html">Энтеросгель</a></h4>
+                                        <hr class="hr_color">
+                                        <p>Выведение токсических веществ при заболеваниях печени (вирусный, токсический гепатит, цирроз), заболеваниях желудочно-кише...</p>
+                                    </div>
+                                </div>
+
+                                <div class="column post-related portfolio type-portfolio has-post-thumbnail">
+                                    <div class="image_frame scale-with-grid">
+                                        <div class="image_wrapper">
+                                            <a href="portfolio-item.html">
+                                                <div class="mask"></div>
+                                                <img src="images/home_estate2_portfolio6-960x720.jpg" class="scale-with-grid wp-post-image" />
+                                            </a>
+                                            <div class="image_links double">
+                                                <a href="images/home_estate2_portfolio6-1200x774.jpg" class="zoom" rel="prettyphoto"><i class="icon-search"></i></a><a href="portfolio-item.html" class="link"><i class="icon-link"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="desc">
+                                        <h4><a href="portfolio-item.html">Энтеросгель</a></h4>
+                                        <hr class="hr_color">
+                                        <p>Выведение токсических веществ при заболеваниях печени (вирусный, токсический гепатит, цирроз), заболеваниях желудочно-кише...</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock product %}

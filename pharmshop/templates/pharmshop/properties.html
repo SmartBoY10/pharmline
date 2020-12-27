@@ -1,0 +1,449 @@
+{% extends 'base.html' %}
+{% load i18n static %}
+{% block properties %} 
+<div id="Content">
+    <div class="content_wrapper clearfix">
+        <div class="sections_group">
+
+              
+            <div class="extra_content">                
+                <div class="section mcb-section" style="padding-top:70px; padding-bottom:30px">
+                    <div class="section_wrapper mcb-section-inner">
+                        <div class="wrap mcb-wrap one valign-top clearfix">
+                            <div class="mcb-wrap-inner">
+                                <div class="column mcb-column one column_column">
+                                    <div class="column_attr clearfix align_center">
+                                        <h2>{% trans 'Лекарственные средства' %}</h2>
+                                        <hr class="no_line" style="margin:0 auto 30px">
+                                        <div style="width: 90px; height: 3px; background: #5e55bb; margin: 0 auto;">
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <div class="section_wrapper clearfix">
+                    <div class="column one column_portfolio">
+                        <div class="portfolio_wrapper isotope_wrapper">
+                            <ul class="portfolio_group lm_wrapper isotope grid col-3">
+                                {% for product in medicines %}
+                                <li class="portfolio-item isotope-item category-aliquam category-maecenas  has-thumbnail">
+                                    <div class="portfolio-item-fw-bg">
+                                        <div class="portfolio-item-fill"></div>
+                                        <!-- <div class="list_style_header">
+                                            <h3 class="entry-title"><a class="link" href="portfolio-item.html">Энтеросгель</a></h3>
+                                            <div class="links_wrapper">
+                                                <a href="#" class="button button_js portfolio_prev_js"><span class="button_icon"><i class="icon-up-open"></i></span></a><a href="#" class="button button_js portfolio_next_js"><span class="button_icon"><i class="icon-down-open"></i></span></a>
+                                                <a
+                                                    href="portfolio-item.html" class="button button_left button_theme button_js"><span class="button_icon"><i class="icon-link"></i></span><span class="button_label">Подробнее</span></a>
+                                            </div>
+                                        </div> -->
+                                        <div class="image_frame scale-with-grid">
+                                            <div class="image_wrapper">
+                                                <a href="{{ product.get_absolute_url }}">
+                                                    <div class="mask"></div>
+                                                    <img src="{{ product.photo.url }}" class="scale-with-grid wp-post-image" />
+                                                </a>
+                                                
+                                            </div>
+                                        </div>
+                                        <div class="desc">
+                                            <div class="title_wrapper cvet">
+                                                <h5 class="entry-title"><a class="link" href="{{ product.get_absolute_url }}">{{ product.name }}</a></h5>
+                                                <p>{{ product.desciption|truncatewords:13 }}</p>
+                                                <a class="button button_size_2 button_theme button_js" href="{{ product.get_absolute_url }}" style="border-radius: 30px; margin-left: 15%;"><span class="button_label" >{% trans 'ПОДРОБНЕЕ' %}</span></a>
+                                            </div>
+                                            
+                                            <div class="desc-wrapper"></div>
+                                        </div>
+                                    </div>
+                                </li>
+                                {% endfor %}
+                                <!-- <li class="portfolio-item isotope-item category-maecenas category-nulla  has-thumbnail">
+                                    <div class="portfolio-item-fw-bg">
+                                        <div class="portfolio-item-fill"></div>
+                                        <div class="list_style_header">
+                                            <h3 class="entry-title"><a class="link" href="portfolio-item.html">Nullam wisi</a></h3>
+                                            <div class="links_wrapper">
+                                                <a href="#" class="button button_js portfolio_prev_js"><span class="button_icon"><i class="icon-up-open"></i></span></a><a href="#" class="button button_js portfolio_next_js"><span class="button_icon"><i class="icon-down-open"></i></span></a>
+                                                <a
+                                                    href="portfolio-item.html" class="button button_left button_theme button_js"><span class="button_icon"><i class="icon-link"></i></span><span class="button_label">Подробнее</span></a>
+                                            </div>
+                                        </div>
+                                        <div class="image_frame scale-with-grid">
+                                            <div class="image_wrapper">
+                                                <a href="portfolio-item.html">
+                                                    <div class="mask"></div>
+                                                    <img src="images/p2.jpg" class="scale-with-grid wp-post-image" />
+                                                </a>
+                                                
+                                            </div>
+                                        </div>
+                                        <div class="desc">
+                                            <div class="title_wrapper cvet">
+                                                <h5 class="entry-title"><a class="link" href="portfolio-item.html">Энтеросгель</a></h5>
+                                                <p>Выведение токсических веществ при заболеваниях печени (вирусный, токсический гепатит, цирроз), заболеваниях желудочно-кише...</p>
+                                                <a class="button button_size_2 button_theme button_js" href="content/estate2/about.html" style="border-radius: 30px; margin-left: 15%;"><span class="button_label" >ПОДРОБНЕЕ</span></a>
+                                            </div>
+                                            
+                                            <div class="desc-wrapper"></div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="portfolio-item isotope-item category-aliquam category-maecenas category-nulla  has-thumbnail">
+                                    <div class="portfolio-item-fw-bg">
+                                        <div class="portfolio-item-fill"></div>
+                                        <div class="list_style_header">
+                                            <h3 class="entry-title"><a class="link" href="portfolio-item.html">Quisque lorem</a></h3>
+                                            <div class="links_wrapper">
+                                                <a href="#" class="button button_js portfolio_prev_js"><span class="button_icon"><i class="icon-up-open"></i></span></a><a href="#" class="button button_js portfolio_next_js"><span class="button_icon"><i class="icon-down-open"></i></span></a>
+                                                <a
+                                                    href="portfolio-item.html" class="button button_left button_theme button_js"><span class="button_icon"><i class="icon-link"></i></span><span class="button_label">Подробнее</span></a>
+                                            </div>
+                                        </div>
+                                        <div class="image_frame scale-with-grid">
+                                            <div class="image_wrapper">
+                                                <a href="portfolio-item.html">
+                                                    <div class="mask"></div>
+                                                    <img src="images/p3.jpg" class="scale-with-grid wp-post-image" />
+                                                </a>
+                                                
+                                            </div>
+                                        </div>
+                                        <div class="desc">
+                                            <div class="title_wrapper cvet">
+                                                <h5 class="entry-title"><a class="link" href="portfolio-item.html">Энтеросгель</a></h5>
+                                                <p>Выведение токсических веществ при заболеваниях печени (вирусный, токсический гепатит, цирроз), заболеваниях желудочно-кише...</p>
+                                                <a class="button button_size_2 button_theme button_js" href="content/estate2/about.html" style="border-radius: 30px; margin-left: 15%;"><span class="button_label" >ПОДРОБНЕЕ</span></a>
+                                            </div>
+                                            
+                                            <div class="desc-wrapper"></div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="portfolio-item isotope-item category-maecenas category-nulla  has-thumbnail">
+                                    <div class="portfolio-item-fw-bg">
+                                        <div class="portfolio-item-fill"></div>
+                                        <div class="list_style_header">
+                                            <h3 class="entry-title"><a class="link" href="portfolio-item.html">Integer aliquam</a></h3>
+                                            <div class="links_wrapper">
+                                                <a href="#" class="button button_js portfolio_prev_js"><span class="button_icon"><i class="icon-up-open"></i></span></a><a href="#" class="button button_js portfolio_next_js"><span class="button_icon"><i class="icon-down-open"></i></span></a>
+                                                <a
+                                                    href="portfolio-item.html" class="button button_left button_theme button_js"><span class="button_icon"><i class="icon-link"></i></span><span class="button_label">Подробнее</span></a>
+                                            </div>
+                                        </div>
+                                        <div class="image_frame scale-with-grid">
+                                            <div class="image_wrapper">
+                                                <a href="portfolio-item.html">
+                                                    <div class="mask"></div>
+                                                    <img src="images/p4.jpg" class="scale-with-grid wp-post-image" />
+                                                </a>
+                                                
+                                            </div>
+                                        </div>
+                                        <div class="desc">
+                                            <div class="title_wrapper cvet">
+                                                <h5 class="entry-title"><a class="link" href="portfolio-item.html">Энтеросгель</a></h5>
+                                                <p>Выведение токсических веществ при заболеваниях печени (вирусный, токсический гепатит, цирроз), заболеваниях желудочно-кише...</p>
+                                                <a class="button button_size_2 button_theme button_js" href="content/estate2/about.html" style="border-radius: 30px; margin-left: 15%;"><span class="button_label" >ПОДРОБНЕЕ</span></a>
+                                            </div>
+                                            
+                                            <div class="desc-wrapper"></div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="portfolio-item isotope-item category-aliquam category-nulla  has-thumbnail">
+                                    <div class="portfolio-item-fw-bg">
+                                        <div class="portfolio-item-fill"></div>
+                                        <div class="list_style_header">
+                                            <h3 class="entry-title"><a class="link" href="portfolio-item.html">Aliquam erat ac</a></h3>
+                                            <div class="links_wrapper">
+                                                <a href="#" class="button button_js portfolio_prev_js"><span class="button_icon"><i class="icon-up-open"></i></span></a><a href="#" class="button button_js portfolio_next_js"><span class="button_icon"><i class="icon-down-open"></i></span></a>
+                                                <a
+                                                    href="portfolio-item.html" class="button button_left button_theme button_js"><span class="button_icon"><i class="icon-link"></i></span><span class="button_label">Подробнее</span></a>
+                                            </div>
+                                        </div>
+                                        <div class="image_frame scale-with-grid">
+                                            <div class="image_wrapper">
+                                                <a href="portfolio-item.html">
+                                                    <div class="mask"></div>
+                                                    <img src="images/p5.jpg" class="scale-with-grid wp-post-image" />
+                                                </a>
+                                                
+                                            </div>
+                                        </div>
+                                        <div class="desc">
+                                            <div class="title_wrapper cvet">
+                                                <h5 class="entry-title"><a class="link" href="portfolio-item.html">Энтеросгель</a></h5>
+                                                <p>Выведение токсических веществ при заболеваниях печени (вирусный, токсический гепатит, цирроз), заболеваниях желудочно-кише...</p>
+                                                <a class="button button_size_2 button_theme button_js" href="content/estate2/about.html" style="border-radius: 30px; margin-left: 15%;"><span class="button_label" >ПОДРОБНЕЕ</span></a>
+                                            </div>
+                                            
+                                            <div class="desc-wrapper"></div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="portfolio-item isotope-item category-aliquam  has-thumbnail">
+                                    <div class="portfolio-item-fw-bg">
+                                        <div class="portfolio-item-fill"></div>
+                                        <div class="list_style_header">
+                                            <h3 class="entry-title"><a class="link" href="portfolio-item.html">Vestibulum dapibus</a></h3>
+                                            <div class="links_wrapper">
+                                                <a href="#" class="button button_js portfolio_prev_js"><span class="button_icon"><i class="icon-up-open"></i></span></a><a href="#" class="button button_js portfolio_next_js"><span class="button_icon"><i class="icon-down-open"></i></span></a>
+                                                <a
+                                                    href="portfolio-item.html" class="button button_left button_theme button_js"><span class="button_icon"><i class="icon-link"></i></span><span class="button_label">Подробнее</span></a>
+                                            </div>
+                                        </div>
+                                        <div class="image_frame scale-with-grid">
+                                            <div class="image_wrapper">
+                                                <a href="portfolio-item.html">
+                                                    <div class="mask"></div>
+                                                    <img src="images/p6.jpg" class="scale-with-grid wp-post-image" />
+                                                </a>
+                                                
+                                            </div>
+                                        </div>
+                                        <div class="desc">
+                                            <div class="title_wrapper cvet">
+                                                <h5 class="entry-title"><a class="link" href="portfolio-item.html">Энтеросгель</a></h5>
+                                                <p>Выведение токсических веществ при заболеваниях печени (вирусный, токсический гепатит, цирроз), заболеваниях желудочно-кише...</p>
+                                                <a class="button button_size_2 button_theme button_js" href="content/estate2/about.html" style="border-radius: 30px; margin-left: 15%;"><span class="button_label" >ПОДРОБНЕЕ</span></a>
+                                            </div>
+                                            
+                                            <div class="desc-wrapper"></div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="portfolio-item isotope-item category-maecenas  has-thumbnail">
+                                    <div class="portfolio-item-fw-bg">
+                                        <div class="portfolio-item-fill"></div>
+                                        <div class="list_style_header">
+                                            <h3 class="entry-title"><a class="link" href="portfolio-item.html">Lorem ipsum dolor</a></h3>
+                                            <div class="links_wrapper">
+                                                <a href="#" class="button button_js portfolio_prev_js"><span class="button_icon"><i class="icon-up-open"></i></span></a><a href="#" class="button button_js portfolio_next_js"><span class="button_icon"><i class="icon-down-open"></i></span></a>
+                                                <a
+                                                    href="portfolio-item.html" class="button button_left button_theme button_js"><span class="button_icon"><i class="icon-link"></i></span><span class="button_label">Подробнее</span></a>
+                                            </div>
+                                        </div>
+                                        <div class="image_frame scale-with-grid">
+                                            <div class="image_wrapper">
+                                                <a href="portfolio-item.html">
+                                                    <div class="mask"></div>
+                                                    <img src="images/p7.jpg" class="scale-with-grid wp-post-image" />
+                                                </a>
+                                                
+                                            </div>
+                                        </div>
+                                        <div class="desc">
+                                            <div class="title_wrapper cvet">
+                                                <h5 class="entry-title"><a class="link" href="portfolio-item.html">Энтеросгель</a></h5>
+                                                <p>Выведение токсических веществ при заболеваниях печени (вирусный, токсический гепатит, цирроз), заболеваниях желудочно-кише...</p>
+                                                <a class="button button_size_2 button_theme button_js" href="content/estate2/about.html" style="border-radius: 30px; margin-left: 15%;"><span class="button_label" >ПОДРОБНЕЕ</span></a>
+                                            </div>
+                                            
+                                            <div class="desc-wrapper"></div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="portfolio-item isotope-item category-nulla  has-thumbnail">
+                                    <div class="portfolio-item-fw-bg">
+                                        <div class="portfolio-item-fill"></div>
+                                        <div class="list_style_header">
+                                            <h3 class="entry-title"><a class="link" href="portfolio-item.html">Curabitur et ligula</a></h3>
+                                            <div class="links_wrapper">
+                                                <a href="#" class="button button_js portfolio_prev_js"><span class="button_icon"><i class="icon-up-open"></i></span></a><a href="#" class="button button_js portfolio_next_js"><span class="button_icon"><i class="icon-down-open"></i></span></a>
+                                                <a
+                                                    href="portfolio-item.html" class="button button_left button_theme button_js"><span class="button_icon"><i class="icon-link"></i></span><span class="button_label">Подробнее</span></a>
+                                            </div>
+                                        </div>
+                                        <div class="image_frame scale-with-grid">
+                                            <div class="image_wrapper">
+                                                <a href="portfolio-item.html">
+                                                    <div class="mask"></div>
+                                                    <img src="images/p8.jpg" class="scale-with-grid wp-post-image" />
+                                                </a>
+                                                
+                                            </div>
+                                        </div>
+                                        <div class="desc">
+                                            <div class="title_wrapper cvet">
+                                                <h5 class="entry-title"><a class="link" href="portfolio-item.html">Энтеросгель</a></h5>
+                                                <p>Выведение токсических веществ при заболеваниях печени (вирусный, токсический гепатит, цирроз), заболеваниях желудочно-кише...</p>
+                                                <a class="button button_size_2 button_theme button_js" href="content/estate2/about.html" style="border-radius: 30px; margin-left: 15%;"><span class="button_label" >ПОДРОБНЕЕ</span></a>
+                                            </div>
+                                            
+                                            <div class="desc-wrapper"></div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="portfolio-item isotope-item category-aliquam category-maecenas  has-thumbnail">
+                                    <div class="portfolio-item-fw-bg">
+                                        <div class="portfolio-item-fill"></div>
+                                        <div class="list_style_header">
+                                            <h3 class="entry-title"><a class="link" href="portfolio-item.html">Etiam ullamcorper</a></h3>
+                                            <div class="links_wrapper">
+                                                <a href="#" class="button button_js portfolio_prev_js"><span class="button_icon"><i class="icon-up-open"></i></span></a><a href="#" class="button button_js portfolio_next_js"><span class="button_icon"><i class="icon-down-open"></i></span></a>
+                                                <a
+                                                    href="portfolio-item.html" class="button button_left button_theme button_js"><span class="button_icon"><i class="icon-link"></i></span><span class="button_label">Подробнее</span></a>
+                                            </div>
+                                        </div>
+                                        <div class="image_frame scale-with-grid">
+                                            <div class="image_wrapper">
+                                                <a href="portfolio-item.html">
+                                                    <div class="mask"></div>
+                                                    <img src="images/p9.jpg" class="scale-with-grid wp-post-image" />
+                                                </a>
+                                                
+                                            </div>
+                                        </div>
+                                        <div class="desc">
+                                            <div class="title_wrapper cvet">
+                                                <h5 class="entry-title"><a class="link" href="portfolio-item.html">Энтеросгель</a></h5>
+                                                <p>Выведение токсических веществ при заболеваниях печени (вирусный, токсический гепатит, цирроз), заболеваниях желудочно-кише...</p>
+                                                <a class="button button_size_2 button_theme button_js" href="content/estate2/about.html" style="border-radius: 30px; margin-left: 15%;"><span class="button_label" >ПОДРОБНЕЕ</span></a>
+                                            </div>
+                                            
+                                            <div class="desc-wrapper"></div>
+                                        </div>
+                                    </div>
+                                </li> -->
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+         
+            
+            
+            <div class="section mcb-section" style="padding-top:70px; padding-bottom:30px">
+                <div class="section_wrapper mcb-section-inner">
+                    <div class="wrap mcb-wrap one valign-top clearfix">
+                        <div class="mcb-wrap-inner">
+                            <div class="column mcb-column one column_column">
+                                <div class="column_attr clearfix align_center">
+                                    <h2>{% trans 'Медицинские изделия' %}</h2>
+                                    <hr class="no_line" style="margin:0 auto 30px">
+                                    <div style="width: 90px; height: 3px; background: #5e55bb; margin: 0 auto;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="section_wrapper clearfix">
+                    <div class="column one column_portfolio">
+                        <div class="portfolio_wrapper isotope_wrapper">
+                            <ul class="portfolio_group lm_wrapper isotope grid col-3">
+                                {% for product in medical_devices %}
+                                <li class="portfolio-item isotope-item category-maecenas category-nulla  has-thumbnail">
+                                    <div class="portfolio-item-fw-bg">
+                                        <div class="portfolio-item-fill"></div>
+                                        <!-- <div class="list_style_header">
+                                            <h3 class="entry-title"><a class="link" href="portfolio-item.html">Integer aliquam</a></h3>
+                                            <div class="links_wrapper">
+                                                <a href="#" class="button button_js portfolio_prev_js"><span class="button_icon"><i class="icon-up-open"></i></span></a><a href="#" class="button button_js portfolio_next_js"><span class="button_icon"><i class="icon-down-open"></i></span></a>
+                                                <a
+                                                    href="portfolio-item.html" class="button button_left button_theme button_js"><span class="button_icon"><i class="icon-link"></i></span><span class="button_label">Подробнее</span></a>
+                                            </div>
+                                        </div> -->
+                                        <div class="image_frame scale-with-grid">
+                                            <div class="image_wrapper">
+                                                <a href="{{ product.get_absolute_url }}">
+                                                    <div class="mask"></div>
+                                                    <img src="{{ product.photo.url }}" class="scale-with-grid wp-post-image" />
+                                                </a>
+                                                
+                                            </div>
+                                        </div>
+                                        <div class="desc">
+                                            <div class="title_wrapper cvet">
+                                                <h5 class="entry-title"><a class="link" href="{{ product.get_absolute_url }}">{{ product.name }}</a></h5>
+                                                <p>{{ product.desciption|truncatewords:13 }}</p>
+                                                <a class="button button_size_2 button_theme button_js" href="{{ product.get_absolute_url }}" style="border-radius: 30px; margin-left: 15%;"><span class="button_label" >{% trans 'ПОДРОБНЕЕ' %}</span></a>
+                                            </div>
+                                            
+                                            <div class="desc-wrapper"></div>
+                                        </div>
+                                    </div>
+                                </li>
+                                {% endfor %}
+                                <!-- <li class="portfolio-item isotope-item category-aliquam category-nulla  has-thumbnail">
+                                    <div class="portfolio-item-fw-bg">
+                                        <div class="portfolio-item-fill"></div>
+                                        <div class="list_style_header">
+                                            <h3 class="entry-title"><a class="link" href="portfolio-item.html">Aliquam erat ac</a></h3>
+                                            <div class="links_wrapper">
+                                                <a href="#" class="button button_js portfolio_prev_js"><span class="button_icon"><i class="icon-up-open"></i></span></a><a href="#" class="button button_js portfolio_next_js"><span class="button_icon"><i class="icon-down-open"></i></span></a>
+                                                <a
+                                                    href="portfolio-item.html" class="button button_left button_theme button_js"><span class="button_icon"><i class="icon-link"></i></span><span class="button_label">Подробнее</span></a>
+                                            </div>
+                                        </div>
+                                        <div class="image_frame scale-with-grid">
+                                            <div class="image_wrapper">
+                                                <a href="portfolio-item.html">
+                                                    <div class="mask"></div>
+                                                    <img src="images/p5.jpg" class="scale-with-grid wp-post-image" />
+                                                </a>
+                                                
+                                            </div>
+                                        </div>
+                                        <div class="desc">
+                                            <div class="title_wrapper cvet">
+                                                <h5 class="entry-title"><a class="link" href="portfolio-item.html">Энтеросгель</a></h5>
+                                                <p>Выведение токсических веществ при заболеваниях печени (вирусный, токсический гепатит, цирроз), заболеваниях желудочно-кише...</p>
+                                                <a class="button button_size_2 button_theme button_js" href="content/estate2/about.html" style="border-radius: 30px; margin-left: 15%;"><span class="button_label" >ПОДРОБНЕЕ</span></a>
+                                            </div>
+                                            
+                                            <div class="desc-wrapper"></div>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li class="portfolio-item isotope-item category-aliquam  has-thumbnail">
+                                    <div class="portfolio-item-fw-bg">
+                                        <div class="portfolio-item-fill"></div>
+                                        <div class="list_style_header">
+                                            <h3 class="entry-title"><a class="link" href="portfolio-item.html">Vestibulum dapibus</a></h3>
+                                            <div class="links_wrapper">
+                                                <a href="#" class="button button_js portfolio_prev_js"><span class="button_icon"><i class="icon-up-open"></i></span></a><a href="#" class="button button_js portfolio_next_js"><span class="button_icon"><i class="icon-down-open"></i></span></a>
+                                                <a
+                                                    href="portfolio-item.html" class="button button_left button_theme button_js"><span class="button_icon"><i class="icon-link"></i></span><span class="button_label">Подробнее</span></a>
+                                            </div>
+                                        </div>
+                                        <div class="image_frame scale-with-grid">
+                                            <div class="image_wrapper">
+                                                <a href="portfolio-item.html">
+                                                    <div class="mask"></div>
+                                                    <img src="images/p6.jpg" class="scale-with-grid wp-post-image" />
+                                                </a>
+                                                
+                                            </div>
+                                        </div>
+                                        <div class="desc">
+                                            <div class="title_wrapper cvet">
+                                                <h5 class="entry-title"><a class="link" href="portfolio-item.html">Энтеросгель</a></h5>
+                                                <p>Выведение токсических веществ при заболеваниях печени (вирусный, токсический гепатит, цирроз), заболеваниях желудочно-кише...</p>
+                                                <a class="button button_size_2 button_theme button_js" href="content/estate2/about.html" style="border-radius: 30px; margin-left: 15%;"><span class="button_label" >ПОДРОБНЕЕ</span></a>
+                                            </div>
+                                            
+                                            <div class="desc-wrapper"></div>
+                                        </div>
+                                    </div>
+                                </li> -->
+                                
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>            
+        </div>
+    </div>
+</div>
+{% endblock properties %}

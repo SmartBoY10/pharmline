@@ -1,0 +1,6 @@
+from django import forms
+
+class ContactForm(forms.Form):
+    name = forms.CharField(required=True, widget=forms.TextInput(attrs={'name':"name", 'type':"text", 'placeholder':"Ваше имя", 'type':"text", 'name':"name", 'id':"name", 'size':"40", 'aria-required':"true", 'aria-invalid':"false", 'style':"font-size: 17px; border-radius: 30px; padding: 15px; background-color: #fbfbfb;", 'tabindex':"0", 'class':"form_input form-input__name"}))
+    number = forms.IntegerField(required=True, widget=forms.NumberInput(attrs={'name':"phone", 'type':"tel", 'placeholder':"Ваш телефон", 'type':"tel", 'name':"phone", 'id':"phone", 'size':"40", 'aria-required':"true", 'aria-invalid':"false", 'style':"font-size: 17px; border-radius: 30px; padding: 15px; background-color: #fbfbfb;",  'tabindex':"0", 'pattern':"+^[ 0-9]+$",  'class':"form_input form-input__phone"}))
+    content = forms.CharField(required=True, widget=forms.Textarea(attrs={'name':"theme", 'type':"hidden", 'placeholder':"Примечание...", 'type':"text", 'name':"body", 'value':"Заявка с сайта", 'cols':"1", 'rows':"5", 'style':"width:95%; font-size: 16px; border-radius: 30px; padding: 15px; background-color: #fbfbfb;", 'class':"form-input__theme"}))

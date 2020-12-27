@@ -1,0 +1,231 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-12-26 00:29+0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: .\pharmshop\templates\pharmshop\about.html:32
+#: .\pharmshop\templates\pharmshop\about.html:55
+#: .\templates\_inc\header.html:55
+msgid "О компании"
+msgstr "Kompaniya h"
+
+#: .\pharmshop\templates\pharmshop\articles.html:15
+#: .\templates\_inc\header.html:70
+msgid "Статьи"
+msgstr "Maqolalar"
+
+#: .\pharmshop\templates\pharmshop\articles.html:57
+#: .\pharmshop\templates\pharmshop\index.html:27
+#: .\pharmshop\templates\pharmshop\properties.html:59
+#: .\pharmshop\templates\pharmshop\properties.html:369
+#: .\pharmshop\templates\pharmshop\videos.html:55
+msgid "ПОДРОБНЕЕ"
+msgstr "BATAFSIL"
+
+#: .\pharmshop\templates\pharmshop\index.html:15
+msgid "ВЫСОКОКАЧЕСТВЕННЫЕ НЕОБХОДИМЫЕ ПРЕПАРАТЫ"
+msgstr "YUQORI SIFATLI KERAKLI MAHSULOTLAR"
+
+#: .\pharmshop\templates\pharmshop\index.html:55
+msgid "Наши преимущества"
+msgstr "Bizning afzalliklarimiz"
+
+#: .\pharmshop\templates\pharmshop\index.html:73
+msgid "Партнёрство"
+msgstr "Hamkorlik"
+
+#: .\pharmshop\templates\pharmshop\index.html:77
+msgid "У нас отлаженная и гибкая система взаимоотношений между партнёрами в нашей республике и за её пределами."
+msgstr "Bizda respublikamizdagi va chet eldagi sheriklar o'rtasida yaxshi ishlaydigan va moslashuvchan munosabatlar tizimi mavjud."
+
+#: .\pharmshop\templates\pharmshop\index.html:83
+msgid "Доступность"
+msgstr "Mavjudligi"
+
+#: .\pharmshop\templates\pharmshop\index.html:86
+msgid "Мы удовлетворяем население экономически доступными лекарственными средствами и препаратами медицинского назначения, во всех уголках Узбекистана."
+msgstr "Biz O'zbekistonning barcha burchaklarida aholini iqtisodiy jihatdan arzon dori-darmon va tibbiy buyumlar bilan qondiramiz."
+
+#: .\pharmshop\templates\pharmshop\index.html:92
+msgid "Инновации"
+msgstr "Inovatsiyalar"
+
+#: .\pharmshop\templates\pharmshop\index.html:95
+msgid "Мы внедряем современные, высокотехнологичные лекарственные средства и медицинские изделия, для повышения эффективности лечения и улучшения качества жизни пациентов."
+msgstr "Davolash samaradorligini oshirish va bemorlarning hayot sifatini yaxshilash uchun zamonaviy, yuqori texnologik dorilar va tibbiy mahsulotlarni joriy etamiz."
+
+#: .\pharmshop\templates\pharmshop\index.html:135
+msgid "КАТАЛОГ"
+msgstr "KATALOG"
+
+#: .\pharmshop\templates\pharmshop\index.html:168
+msgid "Оставьте заявку"
+msgstr "So'rov qoldiring"
+
+#: .\pharmshop\templates\pharmshop\index.html:169
+msgid "Вы можете оставить заявку для консультации<br> или заказа препаратов"
+msgstr "Siz konsultatsiya yoki dorilarni buyurish uchun<br> so'rov qoldirishingiz mumkin"
+
+#: .\pharmshop\templates\pharmshop\index.html:171
+msgid "Заполните пожалуйста поля"
+msgstr "Iltimos, maydonlarni to'ldiring"
+
+#: .\pharmshop\templates\pharmshop\index.html:194
+msgid "Вся продукция реализуется для оптовых покупателей"
+msgstr "Barcha mahsulotlar ulgurji xaridorlarga sotiladi"
+
+#: .\pharmshop\templates\pharmshop\product_detail.html:30
+msgid "Действующее вещество:"
+msgstr "Ta'sir etuvchi modda"
+
+#: .\pharmshop\templates\pharmshop\product_detail.html:34
+msgid "Показание препарата:"
+msgstr "Preparatning ko'rsatmasi:"
+
+#: .\pharmshop\templates\pharmshop\product_detail.html:37
+msgid "Сум"
+msgstr "So'm"
+
+#: .\pharmshop\templates\pharmshop\product_detail.html:40
+msgid "ЗАКАЗАТЬ"
+msgstr "BUYURTMA QILISH"
+
+#: .\pharmshop\templates\pharmshop\product_detail.html:57
+msgid "Дополнительная информация:"
+msgstr "Qo'shimcha ma'lumotlar:"
+
+#: .\pharmshop\templates\pharmshop\product_detail.html:59
+msgid "Действие препарата:"
+msgstr "Preparat ta'siri:"
+
+#: .\pharmshop\templates\pharmshop\product_detail.html:61
+msgid "Состав:"
+msgstr "Tarkibi:"
+
+#: .\pharmshop\templates\pharmshop\product_detail.html:63
+msgid "Формы выпуска:"
+msgstr "Chiqarish shakllari:"
+
+#: .\pharmshop\templates\pharmshop\properties.html:16
+msgid "Лекарственные средства"
+msgstr "Dori vositalari"
+
+#: .\pharmshop\templates\pharmshop\properties.html:329
+msgid "Медицинские изделия"
+msgstr "Tibbiyot anjomlari"
+
+#: .\pharmshop\templates\pharmshop\services.html:12
+msgid "ЗА ГОДЫ РАБОТЫ МЫ ЗАРЕКОМЕНДОВАЛИ СЕБЯ"
+msgstr "KO'P YILLIK FAOLIYATIMIZ DAVOMIDA BIZ O'ZIMIZNI"
+
+#: .\pharmshop\templates\pharmshop\services.html:14
+msgid "КАК НАДЖЕНЫЙ ПАРТНЕР"
+msgstr "FARMATSEVTIK MARKETING SOHASIDA"
+
+#: .\pharmshop\templates\pharmshop\services.html:16
+msgid "В ОБЛАСТИ ФАРМАЦЕВТИЧЕСКОГО МАРКЕТИНГА"
+msgstr "ISHONCHLI HAMKOR SIFATIDA TAVSIYA ETDIK"
+
+#: .\pharmshop\templates\pharmshop\services.html:27
+#: .\templates\_inc\header.html:67
+msgid "Услуги"
+msgstr "Xizmatlar"
+
+#: .\pharmshop\templates\pharmshop\services.html:41
+msgid "Регистрация, перерегистрация, внесение изменений в материалы регистрационного досье."
+msgstr "Ro'yxatga olish, qayta ro'yxatdan o'tkazish, ro'yxatga olish ma'lumotlari materiallariga o'zgartirishlar kiritish."
+
+#: .\pharmshop\templates\pharmshop\services.html:46
+msgid "Аудит материалов регистрационного досье с целью регистрации, перерегистрации, внесения изменений в материалы регистрационного досье."
+msgstr "Ro'yxatga olish, qayta ro'yxatdan o'tkazish, ro'yxatga olish hujjatlari materiallariga o'zgartirishlar kiritish maqsadida ro'yxatdan o'tish materiallari auditi."
+
+#: .\pharmshop\templates\pharmshop\services.html:51
+msgid "Подготовка (сбор, доработка) материалов регистрационного досье, согласно требований законодательства."
+msgstr "Qonunchilik talablariga muvofiq ro'yxatdan o'tish materiallarini tayyorlash (yig'ish, qayta ko'rib chiqish)."
+
+#: .\pharmshop\templates\pharmshop\services.html:62
+msgid "В «Pharmline Plus» создано несколько подразделений по продвижению препаратов. Подразделения выделены по производителю и по характеру продукции нацеленной на определенную целевую аудиторию."
+msgstr "«Pharmline Plus» bir nechta dori-darmonlarni tarqatish bo'limlarini tashkil etdi. Bo'linmalar ishlab chiqaruvchilar va aniq maqsadli auditoriyaga yo'naltirilgan mahsulotlar xususiyati bo'yicha taqsimlanadi."
+
+#: .\pharmshop\templates\pharmshop\services.html:67
+msgid "Подразделения нацелены на взаимодействие с целевыми группами:"
+msgstr "Bo'limlar maqsadli guruhlar bilan o'zaro aloqada bo'lishga qaratilgan:"
+
+#: .\pharmshop\templates\pharmshop\services.html:70
+msgid "Госпитальные закупы"
+msgstr "Kasalxonalarni sotib olish"
+
+#: .\pharmshop\templates\pharmshop\services.html:71
+msgid "Аптечные продажи, работа с провизорами и первостольниками аптек"
+msgstr "Dorixonalarni sotish, farmatsevtlar va farmatsevtlar bilan ishlash"
+
+#: .\pharmshop\templates\pharmshop\services.html:72
+msgid "Врачи первичного амбулаторного звена"
+msgstr "Birlamchi ambulatoriya vrachlari"
+
+#: .\pharmshop\templates\pharmshop\services.html:73
+msgid "Узкопрофильные клиники и специалисты (онкология, гематология, эндокринология, неврология и др.)"
+msgstr "Tor profilli klinikalar va mutaxassislar (onkologiya, gematologiya, endokrinologiya, nevrologiya va boshqalar)"
+
+#: .\pharmshop\templates\pharmshop\services.html:75
+msgid "Также наша компания оказывает следующие услуги по дистрибуции:"
+msgstr "Shuningdek, bizning kompaniyamiz quyidagi tarqatish xizmatlarini taqdim etadi:"
+
+#: .\pharmshop\templates\pharmshop\services.html:77
+msgid "Предоставление информации о востребованных лекарственных средств на рынке;"
+msgstr "Bozorda talab qilinadigan dori vositalari to'g'risida ma'lumot berish;"
+
+#: .\pharmshop\templates\pharmshop\services.html:78
+msgid "Организация и контроль поставки лекарственных средств через поставщиков/дистрибьюторов;"
+msgstr "Yetkazib beruvchilar/tarqatuvchilar orqali dori-darmonlarni etkazib berishni tashkil etish va nazorat qilish;"
+
+#: .\pharmshop\templates\pharmshop\services.html:79
+msgid "Консультации по ценовой политике в отношении лекарственных препаратов."
+msgstr "Dori vositalarining narx siyosati bo'yicha maslahat."
+
+#: .\pharmshop\templates\pharmshop\services.html:80
+msgid "“Pharmline Plus ” за годы работы зарекомендовала себя, как надежный партнер в области фармацевтического маркетинга, предоставляющая услуги высокого качества. Основной целью “Pharmline Plus ” является, быть гибкой и клиент ориентированной командой профессионалов, способной обеспечить высокий уровень сервиса."
+msgstr "Ko'p yillar davomida Pharmline Plus o'zini yuqori sifatli xizmatlar ko'rsatadigan farmatsevtika marketingi sohasida ishonchli sherik sifatida namoyon etdi. Pharmline Plus-ning asosiy maqsadi - bu yuqori darajadagi xizmat ko'rsatishga qodir bo'lgan moslashuvchan va mijozlarga yo'naltirilgan mutaxassislar jamoasi."
+
+#: .\pharmshop\templates\pharmshop\videos.html:15
+msgid "Видео ролики"
+msgstr "Video lavhalar"
+
+#: .\templates\_inc\footer.html:25
+msgid "г. Ташкент, 100105, улица"
+msgstr "Toshkent, 100105, "
+
+#: .\templates\_inc\footer.html:25
+msgid "Оккурган, д.31"
+msgstr "Oqqo'rg'on ko'chasi, 31-uy"
+
+#: .\templates\_inc\header.html:11
+msgid "Выбор языка"
+msgstr "Tilni tanlash"
+
+#: .\templates\_inc\header.html:52
+msgid "Главная"
+msgstr "Asosiy"
+
+#: .\templates\_inc\header.html:58
+msgid "Каталог"
+msgstr "Katalog"
+
+#: .\templates\_inc\header.html:73
+msgid "Видео"
+msgstr "Video"

@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% load i18n static %}
+{% block video %}
+<div id="Content">
+    <div class="content_wrapper clearfix">
+        <div class="sections_group">
+            <div class="entry-content">                
+                <div class="section mcb-section" style="padding-top:100px; padding-bottom:50px">
+                    <div class="section_wrapper mcb-section-inner">
+                        <div class="wrap mcb-wrap one valign-top clearfix" style="padding:20px 0 0 0">
+                            <div class="mcb-wrap-inner">
+                                <div class="wrap mcb-wrap one-second column-margin-10px valign-top clearfix">
+                                    <div class="mcb-wrap-inner">
+                                        <div class="column mcb-column one column_image">
+                                            <div class="image_frame image_item no_link scale-with-grid aligncenter no_border">
+                                                <div class="image_wrapper">
+                                                    <video width='600' controls>
+                                                        <source src='{{ video_url }}' type='video/mp4'>
+                                                        File not found.
+                                                    </video>
+                                                    <!-- <video src="{{ video.video.url }}" class="scale-with-grid"></video> -->
+                                                    <!-- <img class="scale-with-grid" src="{{ article.photo.url }}"> -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                                <div class="column mcb-column one-second column_column">
+                                    <div class="column_attr clearfix">
+                                        <h2>{{ video.title }}</h2>
+                                        
+                                        <p class="big">
+                                            {{ video.tagline }}
+                                        </p>
+                                        
+                                        <p class="big">
+                                            {{ video.content|safe }}
+                                        </p>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock video %}

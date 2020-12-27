@@ -1,0 +1,208 @@
+{% extends 'base.html' %}
+{% load i18n static %}
+
+
+{% block slider %} 
+<div id="rev_slider_1_1" class="rev_slider fullwidthabanner"  data-version="5.4.8" style="background-image: url({% static 'content/estate2/images/home_estate2_slider_bg.jpg' %})">
+
+    <ul>
+        <li data-index="rs-1" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off" data-easein="default" data-easeout="default" data-masterspeed="300" data-rotate="0" data-saveperformance="off" data-title="Slide"
+        data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+
+
+            <div class="zag4">
+                <h2>
+                    {% trans 'ВЫСОКОКАЧЕСТВЕННЫЕ НЕОБХОДИМЫЕ ПРЕПАРАТЫ' %}
+                </h2>
+                <h5>
+                    
+                    {% for item in about %}
+                        {{ item.company_year }}
+                    {% endfor %}
+                         
+                </h5>
+                <div class="column mcb-column one column_button" style="text-align: left; margin-top: 15px;">
+                    <a class="button button_size_2 button_theme button_js" href="{% url 'about' %}" style="border-radius: 30px;">
+                        <span class="button_label" >
+                            {% trans 'ПОДРОБНЕЕ' %}
+                        </span>
+                    </a>
+                </div>
+            </div>   
+
+            <div class="topimg">
+                <img src="{% static 'content/estate2/images/glav.png' %}">  
+            </div>                
+
+        </li>
+    </ul>
+
+</div>
+{% endblock slider %}
+
+{% block content %}
+<div id="Content">
+    <div class="content_wrapper clearfix">
+        <div class="sections_group">
+            <div class="entry-content">
+                <div class="section mcb-section full-width" style=" padding-bottom:70px">
+                    <div class="section_wrapper mcb-section-inner">
+                        <div class="wrap mcb-wrap one valign-top clearfix">
+                            <div class="mcb-wrap-inner">
+                                <div class="column mcb-column one column_column">
+                                    <div class="column_attr clearfix align_center">
+                                        <h2>
+                                            {% trans 'Наши преимущества' %}
+                                        </h2>
+                                        <hr class="no_line" style="margin:0 auto 30px">
+                                        <div style="width: 90px; height: 3px; background: #5e55bb; margin: 0 auto;">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="column mcb-column one column_divider">
+                                    <hr class="no_line" style="margin:0 auto 80px">
+                                </div>
+                                <div class="section_wrapper mcb-section-inner">
+                                    <div class="column mcb-column one column_offer preim">
+                                        <div class="block1">
+                                            <div class="premimg1 blimg">
+
+                                            </div>
+                                            <h5>
+                                                <b>
+                                                    {% trans 'Партнёрство' %}
+                                                </b>
+                                            </h5>
+                                            <p style="color: #000;">
+                                                {% trans 'У нас отлаженная и гибкая система взаимоотношений между партнёрами в нашей республике и за её пределами.' %}
+                                            </p>
+                                        </div>
+                                        <div class="block2">
+                                            <div class="premimg2 blimg"></div>
+                                            <h5>
+                                                <b>{% trans 'Доступность' %}</b>
+                                            </h5>
+                                            <p style="color: #000;">
+                                                {% trans 'Мы удовлетворяем население экономически доступными лекарственными средствами и препаратами медицинского назначения, во всех уголках Узбекистана.' %}
+                                            </p>
+                                        </div>
+                                        <div class="block3">
+                                            <div class="premimg3 blimg"></div>
+                                            <h5>
+                                                <b>{% trans 'Инновации' %}</b>
+                                            </h5>
+                                            <p style="color: #000;">
+                                                {% trans 'Мы внедряем современные, высокотехнологичные лекарственные средства и медицинские изделия, для повышения эффективности лечения и улучшения качества жизни пациентов.' %}
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                {% for catalog in catalogs %}
+                <div class="section mcb-section" style="background-image:url({% static 'content/estate2/images/home_estate2_slider_bg2.jpg' %}); background-repeat:no-repeat; background-position:center bottom; width: 100%; height: 100%;     padding-bottom: 100px;">
+                    <div class="column_attr clearfix align_center bg10">
+                        <hr class="no_line" style="margin:0 auto 70px">
+                        <h2 style="color: #fff; margin: 0 20px">{{ catalog.title }}</h2>
+                        <hr class="no_line" style="margin:0 auto 30px">
+                        <div style="width: 90px; height: 5px; background: #daaa22; margin: 0 auto;"></div>
+                    </div>
+
+                    <hr class="no_line" style="margin:0 auto 42px">
+                    <div class="section_wrapper mcb-section-inner">
+                        <div class="column one-second slider-photo">
+                            <div class="slider">
+                                <img src="{% static 'content/estate2/images/1sl.png' %}" class="otstup">
+                            </div>
+                            <div class="slider">
+                                <img src="{% static 'content/estate2/images/2sl.png' %}" class="otstup">
+                            </div>
+                            <div class="slider">
+                                <img src="{% static 'content/estate2/images/3sl.png' %}" class="otstup">
+                            </div>
+                            <div class="slider">
+                                <img src="{% static 'content/estate2/images/4sl.png' %}" class="otstup">
+                            </div>
+                        </div>
+
+                        <div class="column one-second" style="text-align: left; color: #fff;">
+                            <h4 style="text-align: left; color: #fff;"><b>{{ catalog.tagline }}</b></h4>
+                            <p>{{ catalog.content|safe }}</p>
+                            <div class="column mcb-column one column_button">
+                                <a class="button button_size_2 button_theme button_js" href="{% url 'properties' %}" style="border-radius: 30px;"><span class="button_label" >{% trans 'КАТАЛОГ' %}</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+
+            
+            {% for consult in consulting %}   
+            <div class="section mcb-section" style="padding-top:50px; padding-bottom:130px">
+                <div class="column mcb-column one column_column">
+                    <div class="column_attr clearfix align_center">
+                        <h2>{{ consult.title }}</h2>
+                        <hr class="no_line" style="margin:0 auto 30px">
+                        <div style="width: 90px; height: 3px; background: #5e55bb; margin: 0 auto;"></div>
+                    </div>
+                </div>
+                <div class="section_wrapper mcb-section-inner" style="text-align: center;">
+                    <h5>{{ consult.tagline }}</h5>
+                    <hr class="no_line" style="margin:0 auto 50px">
+                    <h5>{{ consult.content|safe }}</h5>
+                </div>
+            </div>
+            {% endfor %}
+
+            <div class="section mcb-section" style="padding-top:160px; background-image:url({% static 'content/estate2/images/home_estate2_slider_bg3.jpg' %}); background-repeat:no-repeat; background-position:center top">
+                <div class="section_wrapper mcb-section-inner zayavgl">
+                    <div class="column one-second devushka" style="margin-bottom: -6px;">
+                        <img src="{% static 'content/estate2/images/dev.png' %}" style="margin-top: 100px;">
+                    </div>
+
+                    <div class="column one-second" style="text-align: left; color: #fff;">
+                        <h2 style="text-align: center; color: #fff;"><b>{% trans 'Оставьте заявку' %}</b></h2>
+                        <p style="text-align: center;">{% trans 'Вы можете оставить заявку для консультации<br> или заказа препаратов' %}</p>
+                        <div class="blockzayav">
+                            <h5 style="color: #fff;"><b>{% trans 'Заполните пожалуйста поля' %}</b></h5>
+                            <div class="zayav">
+                                <form id="form-contact" method="POST" class="form-element" autocomplete="off" style="padding: 19px 20px 20px 32px;">
+                                    {% csrf_token %}
+
+                                    <div class="column one form_grup ots">
+                                        {{ form.name }}
+                                        <!-- <input name="name" type="text" placeholder="Ваше имя" type="text" name="name" id="name" size="40" aria-required="true" aria-invalid="false" style="font-size: 17px; border-radius: 30px; padding: 15px; background-color: #fbfbfb;" class="form_input form-input__name"  tabindex="0" required/> -->
+                                    </div>
+
+                                    <!-- One Second (1/2) Column -->
+                                    <div class="column one form_grup ots">
+                                        {{ form.number }}
+                                        <!-- <input name="phone" type="tel" placeholder="Ваш телефон" type="email" name="email" id="email" size="40" aria-required="true" aria-invalid="false" style="font-size: 17px; border-radius: 30px; padding: 15px; background-color: #fbfbfb;"  tabindex="0" pattern="+^[ 0-9]+$"  class="form_input form-input__phone" required/> -->
+                                    </div>
+                                    
+                                    {{ form.content }}
+                                    <!-- <input name="theme" type="hidden" class="form-input__theme"  value="Заявка с сайта">
+                                    <textarea placeholder="Примечание..." name="body" cols="1" rows="5" style="width:95%; font-size: 16px; border-radius: 30px; padding: 15px; background-color: #fbfbfb;" /></textarea> -->
+
+                                    <input type="submit" class="form-input__button btnz button button_size_2 button_theme button_js" value="ОТПРАВИТЬ"  style="border-radius: 30px; margin-top: 25px;
+                                    width: 95%; font-size: 17px;">
+                                    <p style="color: #000; font-size: 14px;">
+                                        <span style="color: #f00;">* </span>{% trans 'Вся продукция реализуется для оптовых покупателей' %}
+                                    </p>
+
+                                </form> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+{% endblock content %}
+

@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+{% load i18n static %}
+{% block about %}
+<div id="Content">
+    
+    {% for page in about_ %}  
+              
+    <div class="content_wrapper clearfix">
+        <div class="sections_group">
+            <div class="entry-content">
+                <div class="section mcb-section" style="background-image:url({% static 'content/estate2/images/bg2.jpg' %}); background-repeat:no-repeat; background-position:center; background-size: cover; background-attachment: fixed; width: 100%; height: 100%;">
+                    
+                    <div class="centr">
+                        <img src="{% static 'content/estate2/images/paral1.png' %}" class="parallax__layer--base">
+                    </div>           
+                    <hr class="no_line" style="margin:0 auto 30px">
+                    <div class="section_wrapper mcb-section-inner zag1">
+                        <h4 style="text-align: center; color: #fff; margin-bottom: 70px;">
+                            <b>
+                                {{ page.tagline }}
+                            </b>
+                        </h4>
+                        <hr class="no_line" style="margin:0 auto 60px">
+                    </div>
+                </div>
+                <div class="section mcb-section" style="padding-top:70px; padding-bottom:30px">
+                    <div class="section_wrapper mcb-section-inner">
+                        <div class="wrap mcb-wrap one valign-top clearfix">
+                            <div class="mcb-wrap-inner">
+                                <div class="column mcb-column one column_column">
+                                    <div class="column_attr clearfix align_center">
+                                        <h2>{% trans 'О компании' %}</h2>
+                                        <hr class="no_line" style="margin:0 auto 30px">
+                                        <div style="width: 90px; height: 3px; background: #5e55bb; margin: 0 auto;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="section mcb-section" style="padding-top:0px; padding-bottom:50px">
+                    <div class="section_wrapper mcb-section-inner">
+                        <div class="wrap mcb-wrap one valign-top clearfix">
+                            <div class="mcb-wrap-inner">
+                                
+                                <div class="column_attr clearfix">
+                                    <h4>{{ page.title }}</h4>
+                                    <p>
+                                        <b>
+                                            {{ page.tagline }}
+                                        </b>
+                                    </p>
+                                </div>
+                                <div class="column_attr clearfix">
+                                    <h4>{% trans 'О компании' %}</h4>
+                                    <p>{{ page.content|safe }}
+                                        
+                                        <!-- <img src="{% static 'content/estate2/images/k1.jpg' %}"> -->
+
+                                    </p>
+                                </div>                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>  
+{% endblock about %}
