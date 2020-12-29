@@ -55,7 +55,7 @@
                                         <div class="desc">
                                             <div class="title_wrapper cvet">
                                                 <h5 class="entry-title"><a class="link" href="{{ product.get_absolute_url }}">{{ product.name }}</a></h5>
-                                                <p>{{ product.description|truncatewords:13 }}</p>
+                                                <p>{{ product.description|truncatewords:13|safe }}</p>
                                                 <a class="button button_size_2 button_theme button_js" href="{{ product.get_absolute_url }}" style="border-radius: 30px; margin-left: 15%;"><span class="button_label" >{% trans 'ПОДРОБНЕЕ' %}</span></a>
                                             </div>
                                             
